@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /var/www/html/cd
 hooks:
-  ApplicationStop:
+  BeforeBlockTraffic:
     - location: deregister_from_elb.sh
   ApplicationStart:
     - location: register_with_elb.sh
